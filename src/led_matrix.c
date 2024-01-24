@@ -21,39 +21,36 @@ Functions for column and row matrix operation :
 */
 
 // Column Function
-void matrixColsVal (uint8_t value)
-{
-// initilize LATCH_PIN
-gpip_set_level(LATCH_PIN, 0);
+void matrixColsVal(uint8_t value) {
+    // Initialize LATCH_PIN
+    gpio_set_level(LATCH_PIN, 0);
 
-for ( int i=7; i>=0; i-- )
-{
-// Loop to pass column data to DATA_PIN serially
-gpio_set_level (DATA_PIN, (value>>i) & 0b00000001);
-// Toggle SRCLK to shift data to the "Shift Register"
-gpio_set_level (CLOCK_PIN, 1);
-gpio_set_level (CLOCK_PIN,0);
+    for (int i = 7; i >= 0; i--) {
+        // Loop to pass column data to DATA_PIN serially
+        gpio_set_level(DATA_PIN, (value >> i) & 0b00000001);
+        // Toggle SRCLK to shift data to the "Shift Register"
+        gpio_set_level(CLOCK_PIN, 1);
+        gpio_set_level(CLOCK_PIN, 0);
+    }
+
+    // Toggle LATCH_PIN to take Snapshot and Display
+    gpio_set_level(LATCH_PIN, 1);
 }
 
-// Toggle LATCH_PIN to take Snapshot and Display
-gpio_set_level(LATCH_PIN,1);
-}
 
 // Row  Function
-void matrixRowsVal (uint8_t value)
-{
-// initilize LATCH_PIN
-gpip_set_level(LATCH_PIN, 0);
+void matrixRowsVal (uint8_t value) {
+    // Initialize LATCH_PIN
+    gpio_set_level(LATCH_PIN, 0);
 
-for ( int i=7; i>=0; i-- )
-{
-// Loop to pass column data to DATA_PIN serially
-gpio_set_level (DATA_PIN, (value>>i) & 0b00000001);
-// Toggle SRCLK to shift data to the "Shift Register"
-gpio_set_level (CLOCK_PIN, 1);
-gpio_set_level (CLOCK_PIN,0);
-}
+    for (int i = 7; i >= 0; i--) {
+        // Loop to pass column data to DATA_PIN serially
+        gpio_set_level(DATA_PIN, (value >> i) & 0b00000001);
+        // Toggle SRCLK to shift data to the "Shift Register"
+        gpio_set_level(CLOCK_PIN, 1);
+        gpio_set_level(CLOCK_PIN, 0);
+    }
 
-// Toggle LATCH_PIN to take Snapshot and Display
-gpio_set_level(LATCH_PIN,1);
+    // Toggle LATCH_PIN to take Snapshot and Display
+    gpio_set_level(LATCH_PIN, 1);
 }
