@@ -21,7 +21,7 @@ Functions for column and row matrix operation :
 */
 
 // Column Function
-void matrixColsVal(uint8_t value) {
+void matrixColsVal(uint8_t value) { 
     // Initialize LATCH_PIN
     gpio_set_level(LATCH_PIN, 0);
 
@@ -40,7 +40,7 @@ void matrixColsVal(uint8_t value) {
 
 // Row  Function
 void matrixRowsVal (uint8_t value) {
-    // Initialize LATCH_PIN
+    // Initialize LATCH_PIN 
     gpio_set_level(LATCH_PIN, 0);
 
     for (int i = 7; i >= 0; i--) {

@@ -5,13 +5,10 @@
 
     DISCLAIMER
     1. While I have thoroughly tested and approved my code, please use it at your own risk.
-
     2. You might come across some recurring comments in my code. I include them to ensure that readers
     can understand how everything works, even if they haven't seen my other projects. I apologize for any redundancy.
-
     3. The purpose of these codes is to facilitate an understanding of how the ESP-IDF framework works,
     especially since I struggled to learn it due to the lack of available resources.
-
     4. I consistently adopt a Code Modular Design approach for all my projects. This enhances readability, maintainability,
     and reusability. Be sure to explore other source files and headers to gain a complete understanding of the project.
 

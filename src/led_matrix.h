@@ -1,6 +1,6 @@
 // led_matrix.h
 
-#ifndef LED_MATRIX_H
+#ifndef LED_MATRIX_H 
 #define LED_MATRIX_H
 
 // Headers
